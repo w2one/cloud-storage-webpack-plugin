@@ -1,0 +1,12 @@
+{
+  "name": "cloud-storage-webpack-plugin",
+  "version": "0.0.1",
+  "description": "cloud storage webpack plugin",
+  "main": "index.js",
+  "repository": "git@github.com:w2one/cloud-storage-webpack-plugin.git",
+  "author": "Jay",
+  "license": "MIT",
+  "dependencies": {
+    "cos-nodejs-sdk-v5": "^2.5.12"
+  }
+}
