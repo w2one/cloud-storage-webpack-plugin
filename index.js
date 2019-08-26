@@ -2,9 +2,8 @@
  * cloud storage webpack plugin
  */
 
-const { upload } = require("./upload");
-const dir = require("./dir");
-
+const dir = require("./lib/dir");
+const { COS, OSS, QINIU } = require("./lib/upload");
 class CloudStorageWebpackPlugin {
   constructor(options) {
     this.options = options;
@@ -13,11 +12,27 @@ class CloudStorageWebpackPlugin {
   apply(compiler) {
     compiler.hooks.done.tap("assets webpack Plugin", stats => {
       const basePath = stats.compilation.outputOptions.path;
+
       const files = dir(basePath);
 
-      // cos
-      const { cos: config, prefix } = this.options;
-      files.forEach(filePath => upload({ filePath, prefix, basePath }, config));
+      const { prefix, cos, oss, qiniu } = this.options;
+
+      if (cos) {
+        //cos
+        files.forEach(filePath =>
+          COS.upload({ filePath, prefix, basePath }, cos)
+        );
+      } else if (oss) {
+        //oss
+        files.forEach(filePath =>
+          OSS.upload({ filePath, prefix, basePath }, oss)
+        );
+      } else if (qiniu) {
+        //qiniu
+        files.forEach(filePath =>
+          QINIU.upload({ filePath, prefix, basePath }, qiniu)
+        );
+      }
     });
   }
 }
