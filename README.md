@@ -1,6 +1,5 @@
-# cloud-storage-webpack-plugin
+# [cloud-storage-webpack-plugin](https://github.com/w2one/cloud-storage-webpack-plugin) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/w2one/cloud-storage-webpack-plugin/blob/master/LICENSE) [![npm version](https://img.shields.io/badge/cloud--storage--webpack--plugin-0.0.3-blue)](https://www.npmjs.com/package/cloud-storage-webpack-plugin)
 
-cloud storage webpack plugin
 
 supports
 
