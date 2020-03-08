@@ -1,6 +1,6 @@
 {
   "name": "cloud-storage-webpack-plugin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "cloud storage webpack plugin",
   "keywords": [
     "cloud-storage-webpack-plugin",
@@ -8,13 +8,19 @@
     "oss",
     "qiniu"
   ],
-  "main": "index.js",
   "repository": "git@github.com:w2one/cloud-storage-webpack-plugin.git",
-  "author": "Jay",
   "license": "MIT",
+  "author": "Jay",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write  \"./**/*.{js,md,json}\""
+  },
   "dependencies": {
-    "ali-oss": "^6.1.1",
-    "cos-nodejs-sdk-v5": "^2.5.12",
-    "qiniu": "^7.2.2"
+    "ali-oss": "^6.5.1",
+    "cos-nodejs-sdk-v5": "^2.5.20",
+    "qiniu": "^7.3.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }

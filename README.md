@@ -1,28 +1,24 @@
-# [cloud-storage-webpack-plugin](https://github.com/w2one/cloud-storage-webpack-plugin) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/w2one/cloud-storage-webpack-plugin/blob/master/LICENSE) [![npm version](https://img.shields.io/badge/cloud--storage--webpack--plugin-0.0.3-blue)](https://www.npmjs.com/package/cloud-storage-webpack-plugin)
-
+# [cloud-storage-webpack-plugin](https://github.com/w2one/cloud-storage-webpack-plugin) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/w2one/cloud-storage-webpack-plugin/blob/master/LICENSE) [![npm version](https://img.shields.io/badge/cloud--storage--webpack--plugin-0.0.5-blue)](https://www.npmjs.com/package/cloud-storage-webpack-plugin)
 
 supports
 
-- cos 腾讯
-- oss 阿里
-- qiniu 七牛
-
+- cos
+- oss
+- qiniu
 
 ## Install
 
-~~~
+```
 npm install cloud-storage-webpack-plugin -D
 
 yarn add cloud-storage-webpack-plugin -D
-~~~
-
+```
 
 ## Usage
 
+### cos
 
-### cos 腾讯
-
-~~~
+```
 const CloudStorageWebpackPlugin = require("cloud-storage-webpack-plugin");
 
 module.exports = {
@@ -37,12 +33,11 @@ module.exports = {
       }
   ]
 }
-~~~
+```
 
+### oss
 
-### oss 阿里
-
-~~~
+```
 const CloudStorageWebpackPlugin = require("cloud-storage-webpack-plugin");
 
 module.exports = {
@@ -57,11 +52,11 @@ module.exports = {
       },
   ]
 }
-~~~
+```
 
-### qiniu 七牛
+### qiniu
 
-~~~
+```
 const CloudStorageWebpackPlugin = require("cloud-storage-webpack-plugin");
 
 module.exports = {
@@ -75,5 +70,4 @@ module.exports = {
       }
   ]
 }
-~~~
-
+```

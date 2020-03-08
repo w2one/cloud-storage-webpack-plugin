@@ -4,9 +4,9 @@ cloud storage webpack plugin
 
 supports
 
-- cos 腾讯
-- oss 阿里
-- qiniu 七牛
+- cos 
+- oss 
+- qiniu 
 
 
 ## Install
@@ -21,7 +21,7 @@ yarn add cloud-storage-webpack-plugin -D
 ## Usage
 
 
-### cos 腾讯
+### cos 
 
 ~~~
 const CloudStorageWebpackPlugin = require("cloud-storage-webpack-plugin");
@@ -41,7 +41,7 @@ module.exports = {
 ~~~
 
 
-### oss 阿里
+### oss 
 
 ~~~
 const CloudStorageWebpackPlugin = require("cloud-storage-webpack-plugin");
@@ -60,7 +60,7 @@ module.exports = {
 }
 ~~~
 
-### qiniu 七牛
+### qiniu 
 
 ~~~
 const CloudStorageWebpackPlugin = require("cloud-storage-webpack-plugin");

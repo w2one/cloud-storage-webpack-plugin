@@ -10,7 +10,7 @@ class CloudStorageWebpackPlugin {
   }
 
   apply(compiler) {
-    compiler.hooks.done.tap("assets webpack Plugin", stats => {
+    compiler.hooks.done.tap("assets webpack Plugin", (stats) => {
       const basePath = stats.compilation.outputOptions.path;
 
       const files = dir(basePath);
@@ -19,19 +19,13 @@ class CloudStorageWebpackPlugin {
 
       if (cos) {
         //cos
-        files.forEach(filePath =>
-          COS.upload({ filePath, prefix, basePath }, cos)
-        );
+        files.forEach((filePath) => COS.upload({ filePath, prefix, basePath }, cos));
       } else if (oss) {
         //oss
-        files.forEach(filePath =>
-          OSS.upload({ filePath, prefix, basePath }, oss)
-        );
+        files.forEach((filePath) => OSS.upload({ filePath, prefix, basePath }, oss));
       } else if (qiniu) {
         //qiniu
-        files.forEach(filePath =>
-          QINIU.upload({ filePath, prefix, basePath }, qiniu)
-        );
+        files.forEach((filePath) => QINIU.upload({ filePath, prefix, basePath }, qiniu));
       }
     });
   }
